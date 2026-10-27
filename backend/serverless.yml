@@ -16,6 +16,7 @@ functions:
           path: hello
           method: get
           cors: true
+
  
   getEvent:
     handler: dist/getEvent.handler
@@ -23,5 +24,13 @@ functions:
       - http:
           path: events/{id}
           method: get
+          cors: true
+
+  createEvent:
+    handler: dist/createEvent.handler
+    events:
+      - http:
+          path: createEvent
+          method: post
           cors: true
  
